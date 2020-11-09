@@ -1,4 +1,3 @@
-# version 2 with name
 import win32com.client as client
 import csv
 import time
@@ -18,7 +17,7 @@ for email, link in distro:
         message = outlook.CreateItem(0)
         message.To = email
         message.Subject = "Assignment Spreadsheet"
-        bodyMessage = "Hello there, \n\nWelcome back to another year at Northwood High School! Attached below is a link to a spreadsheet that contains your current assignments and missing assignments. These will be updated daily so make sure to check to stay up to date with all your assignments. On the second tab you will see a column named '(Students) Finished' where you can check off what you have finished.\n" + link + "\n\nSincerely, \nJeremy "
+        bodyMessage = "Hello there, \n\nWelcome back to another year at Sample High School! Attached below is a link to a spreadsheet that contains your current assignments and missing assignments. These will be updated daily so make sure to check to stay up to date with all your assignments. On the second tab you will see a column named '(Students) Finished' where you can check off what you have finished.\n" + link + "\n\nSincerely, \nJeremy "
         message.Body = bodyMessage
         message.Send()
         count += 1
